@@ -21,10 +21,20 @@ The repository consists of five main components, covering the entire lifecycle f
 - **Fair Value Estimation**: Predicts a car's market value based on various parameters.
 - **Investment Rating**: Provides an investment grade (e.g., A+, B, C) and a detailed explanation of the car's retention characteristics.
 - **Value Retention Score (VRS)**: Calculates the annual geometric price retention of models to evaluate investment potential, assigning grades from "A+ Elite Retention" down to "D High Depreciation Risk".
+$$\text{Annual Retention (\%)} = \left( \frac{\text{Price}_{old}}{\text{Price}_{young}} \right)^{\frac{1}{\text{Age}_{diff}}} \times 100$$
 - **Future Value Estimation**: Predicts the depreciation curve and estimated resale value of a vehicle over a designated future ownership period.
 - **User-Friendly Interface**: A sleek, modern dark-mode design with intuitive input fields and clear result visualization.
 - **Responsive Design**: Optimized for seamless experience across desktop and mobile devices.
 - **Robust Backend**: Built with Flask, featuring model loading, prediction logic, and comprehensive error handling for reliable performance.
+
+## Model Performance & Methodology
+
+The core valuation engine utilizes a **Random Forest Regressor** (700 estimators) trained on over 10,000 cleaned listings, predicting the logarithmic price `log(price)`. Based on a 10% hold-out test set, the model achieves the following metrics:
+- **Mean Absolute Error (MAE):** ~315,975 EGP
+- **MAPE (Average % Error):** 20.86%
+- **R² Score (Variance Explained):** 0.6656
+- **Confidence Intervals:** The engine utilizes the spread across individual decision trees (10th to 90th percentiles) to establish a low/high pricing band, achieving an **84.97% interval coverage rate** on unseen data.
+*Note: High market volatility and the nominal EGP devaluation heavily influence the nominal price predictions and VRS scoring, meaning a high score reflects resistance to both depreciation and inflation.*
 
 ## Technologies Used
 
