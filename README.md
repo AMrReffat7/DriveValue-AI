@@ -25,7 +25,7 @@ The repository consists of five main components, covering the entire lifecycle f
   $$\text{Annual Retention (\%)} = \left( \frac{\text{Price}_{\text{old}}}{\text{Price}_{\text{young}}} \right)^{\frac{1}{\text{Age}_{\text{diff}}}} \times 100$$
   
   This percentage is then normalized to a 0–100 scale (using 85% and 97% retention as the low and high market anchors) and translated into grades ranging from "A+ Elite Retention" down to "D High Depreciation Risk".
-  - **Future Value Estimation**: Predicts the depreciation curve and estimated resale value of a vehicle over a designated future ownership period.
+- **Future Value Estimation**: Predicts the depreciation curve and estimated resale value of a vehicle over a designated future ownership period.
 - **User-Friendly Interface**: A sleek, modern dark-mode design with intuitive input fields and clear result visualization.
 - **Responsive Design**: Optimized for seamless experience across desktop and mobile devices.
 - **Robust Backend**: Built with Flask, featuring model loading, prediction logic, and comprehensive error handling for reliable performance.
