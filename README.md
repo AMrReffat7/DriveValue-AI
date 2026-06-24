@@ -20,9 +20,12 @@ The repository consists of five main components, covering the entire lifecycle f
 
 - **Fair Value Estimation**: Predicts a car's market value based on various parameters.
 - **Investment Rating**: Provides an investment grade (e.g., A+, B, C) and a detailed explanation of the car's retention characteristics.
-- **Value Retention Score (VRS)**: Calculates the annual geometric price retention of models to evaluate investment potential, assigning grades from "A+ Elite Retention" down to "D High Depreciation Risk".
-$$\text{Annual Retention (\%)} = \left( \frac{\text{Price}_{old}}{\text{Price}_{young}} \right)^{\frac{1}{\text{Age}_{diff}}} \times 100$$
-- **Future Value Estimation**: Predicts the depreciation curve and estimated resale value of a vehicle over a designated future ownership period.
+- **Value Retention Score (VRS)**: Evaluates investment potential by calculating the annual geometric price retention of specific models. The base retention rate is computed cross-sectionally across different age bands using the formula:
+  
+  $$\text{Annual Retention (\%)} = \left( \frac{\text{Price}_{\text{old}}}{\text{Price}_{\text{young}}} \right)^{\frac{1}{\text{Age}_{\text{diff}}}} \times 100$$
+  
+  This percentage is then normalized to a 0–100 scale (using 85% and 97% retention as the low and high market anchors) and translated into grades ranging from "A+ Elite Retention" down to "D High Depreciation Risk".
+  - **Future Value Estimation**: Predicts the depreciation curve and estimated resale value of a vehicle over a designated future ownership period.
 - **User-Friendly Interface**: A sleek, modern dark-mode design with intuitive input fields and clear result visualization.
 - **Responsive Design**: Optimized for seamless experience across desktop and mobile devices.
 - **Robust Backend**: Built with Flask, featuring model loading, prediction logic, and comprehensive error handling for reliable performance.
