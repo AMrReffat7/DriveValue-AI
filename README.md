@@ -4,6 +4,8 @@
 
 An application designed to estimate the fair market value, investment potential, and future depreciation of cars in the Egyptian market. Leveraging machine learning models, it provides users with comprehensive insights, including a Vehicle Retention Score (VRS), investment grade, fair value estimates, and future value forecasts.
 
+https://github.com/user-attachments/assets/61571aa9-6c5b-46df-b3a3-9e5413d3ff68
+
 ## Project Architecture
 
 The repository consists of five main components, covering the entire lifecycle from data ingestion to model deployment:
